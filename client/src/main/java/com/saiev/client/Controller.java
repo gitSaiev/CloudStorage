@@ -1,5 +1,6 @@
 package com.saiev.client;
 
+import com.saiev.common.FileToSend;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -191,17 +192,17 @@ public class Controller implements Initializable {
     }
 
     //вспомогательный метод для кнопки переименовать
-    private void renameFile(boolean isleftPanel, boolean isrightPanel, Path oldPath, String newName) {
+    private void renameFile(boolean isLeftPanel, boolean isRightPanel, Path oldPath, String newName) {
         PanelController leftPC = (PanelController) leftPanel.getProperties().get("ctl");
         PanelController rightPC = (PanelController) rightPanel.getProperties().get("ctl");
         Path newPath = Path.of(oldPath.getParent().toString(), newName);
         try {
             Files.copy(oldPath, newPath);
             Files.delete(oldPath);
-            if(isleftPanel) {
+            if(isLeftPanel) {
                 leftPC.updateList(newPath.getParent());
             }
-            if(isrightPanel) {
+            if(isRightPanel) {
                 rightPC.updateList(newPath.getParent());
             }
 

@@ -1,5 +1,7 @@
 package com.saiev.client;
 
+import com.saiev.common.FileInfo;
+import com.saiev.common.FileToSend;
 import io.netty.handler.codec.serialization.ObjectDecoderInputStream;
 import io.netty.handler.codec.serialization.ObjectEncoderOutputStream;
 import org.apache.logging.log4j.LogManager;

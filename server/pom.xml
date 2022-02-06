@@ -68,7 +68,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>ServerApp</mainClass>
+                            <mainClass>com.saiev.server.ServerApp</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -80,7 +80,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>ServerApp</mainClass>
+                            <mainClass>com.saiev.server.ServerApp</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
